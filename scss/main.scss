@@ -1,44 +1,93 @@
+@import "config";
+
 *, ::after, ::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  background: #d1d5db;
-  color: #1e40af;
+  background: $bg-color;
+  color: $blue-dark;
+  height: 100vh;
 }
 
 main {
-  padding: 20px;
-  font-family: Arial, sans-serif;
+  font-family: $font-fam;
   display: grid;
   gap: 30px;
-  grid-template-areas: 'header header header'
-                       'image image style-section'
-                       'btn-r btn-d style-section';
-  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-areas: 'header header'
+                       'left right';
+  grid-template-columns: repeat(2, $image-width);
+  justify-content: center;
 }
 
 h1, h3{
   text-transform: uppercase;
 }
+h1 {
+  font-size: 4rem;
+}
+h3 {
+  font-weight: bolder;
+  margin: 15px 0;
+}
 
 .header {
+  margin-top: 20px;
   grid-area: header;
 }
 
-.img-container {
-  height: 720px;
-  width: 720px;
-  grid-area: image;
-  img {
-    position: absolute;
+.display-section {
+  grid-area: left;
+  display: grid;
+  gap: 20px;
+  width: $image-width;
+  grid-template-areas: 'image image'
+                       'btn-r btn-d';
+  grid-template-columns: repeat(2, 1fr);
 
+  button {
+    border: none;
+    padding: 15px 0;
+    font-size: 1.2rem;
+    font-weight: 700;
   }
 }
 
-.style-section {
-  grid-area: style-section;
+.img-container {
+  height: $image-width;
+  width: $image-width;
+  grid-area: image;
+  img {
+    height: $image-width;
+    width: $image-width;
+    position: absolute;
+    &:nth-child(0) {
+      z-index: 10;
+    }
+    &:nth-child(1) {
+      z-index: 20;
+    }
+    &:nth-child(2) {
+      z-index: 30;
+    }
+    &:nth-child(3) {
+      z-index: 40;
+    }
+    &:nth-child(4) {
+      z-index: 50;
+    }
+    &:nth-child(5) {
+      z-index: 60;
+    }
+    &:nth-child(6) {
+      z-index: 70;
+    }
+    &:nth-child(7) {
+      z-index: 80;
+    }
+  }
 }
 
 #btn-download {
@@ -48,4 +97,34 @@ h1, h3{
 #btn-random {
   grid-area: btn-r;
 }
+
+.style-section {
+  grid-area: right;
+  padding-left: 20px;
+
+  .categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .ck-button {
+    color: $blue-light;
+    font-size: 1.3rem;
+    background: transparent;
+    border: 2px solid $blue-light;
+    padding: 15px 30px;
+    border-radius: 50px;
+
+    &:hover {
+      font-weight: bolder;
+      border-width: 3px;
+    }
+  }
+  input:checked + .ck-button {
+    color: $bg-color;
+    background: $blue-medium;
+    border-color: $blue-medium;
+  }
+}
+
 

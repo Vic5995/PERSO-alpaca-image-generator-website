@@ -10,37 +10,58 @@
 <main>
     <h1 class="header">Alpaca Generator</h1>
 
-    <div class="img-container">
-        <img src="res/images/backgrounds/blue50.png" alt="background color">
-        <img src="res/images/neck/default.png" alt="alpaca's neck">
-        <img src="res/images/ears/default.png" alt="alpaca's ears">
-        <img src="res/images/hair/default.png" alt="alpaca's hair">
-        <img src="res/images/eyes/default.png" alt="alpaca's eyes">
-        <img src="res/images/mouth/default.png" alt="alpaca's mouth">
-        <img src="res/images/leg/default.png" alt="alpaca's leg">
-    </div>
 
-    <button id="btn-random">🔀 Random</button>
-    <button id="btn-download">🖼 Download</button>
+        <div class="display-section">
+            <div class="img-container">
+                <img src="res/images/backgrounds/darkblue70.png" alt="background color">
+                <img src="res/images/neck/default.png" alt="alpaca's neck">
+                <img src="res/images/ears/default.png" alt="alpaca's ears">
+                <img src="res/images/nose.png" alt="alpaca's nose">
+                <img src="res/images/hair/default.png" alt="alpaca's hair">
+                <img src="res/images/eyes/default.png" alt="alpaca's eyes">
+                <img src="res/images/mouth/default.png" alt="alpaca's mouth">
+                <img src="res/images/leg/default.png" alt="alpaca's leg">
+            </div>
 
-    <div class="style-section">
-        <h3>Accessorize the Alpaca's</h3>
-        <div class="categories-container">
-            <button>Hair</button>
-            <button>Ears</button>
-            <button>Eyes</button>
-            <button>Mouth</button>
-            <button>Neck</button>
-            <button>Leg</button>
-            <button>Accessories</button>
-            <button>Background</button>
+            <button id="btn-random">🔀 Random</button>
+            <button id="btn-download">🖼 Download</button>
         </div>
 
-        <h3>Style</h3>
-        <div class="style-container">
+        <div class="style-section">
+            <h3>Accessorize the Alpaca's</h3>
+            <div class="categories-container">
+                <input type="radio" name="category" id="category-hair" value="Hair" hidden>
+                <label class="ck-button" for="category-hair">Hair</label>
 
+                <input type="radio" name="category" id="category-ears" value="Ears" hidden>
+                <label class="ck-button" for="category-ears">Ears</label>
+
+                <input type="radio" name="category" id="category-eyes" value="Eyes" hidden>
+                <label class="ck-button" for="category-eyes">Eyes</label>
+
+                <input type="radio" name="category" id="category-mouth" value="Mouth" hidden>
+                <label class="ck-button" for="category-mouth">Mouth</label>
+
+                <input type="radio" name="category" id="category-neck" value="Neck" hidden>
+                <label class="ck-button" for="category-neck">Neck</label>
+
+                <input type="radio" name="category" id="category-leg" value="Leg" hidden>
+                <label class="ck-button" for="category-leg">Leg</label>
+
+                <input type="radio" name="category" id="category-acces" value="Accessories" hidden>
+                <label class="ck-button" for="category-acces">Accessories</label>
+
+                <input type="radio" name="category" id="category-bg" value="Background" hidden>
+                <label class="ck-button" for="category-bg">Background</label>
+            </div>
+
+            <h3>Style</h3>
+            <div class="style-container">
+
+            </div>
         </div>
-    </div>
+
+
 </main>
 
 </body>

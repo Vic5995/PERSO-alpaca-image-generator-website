@@ -1,38 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 *, ::after, ::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
 body {
-  background: #d1d5db;
-  color: #1e40af; }
+  background: #e4e4e7;
+  color: #0f1b46;
+  height: 100vh; }
 
 main {
-  padding: 20px;
-  font-family: Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   display: grid;
   gap: 30px;
-  grid-template-areas: 'header header header' 'image image style-section' 'btn-r btn-d style-section';
-  grid-template-columns: 1fr 1fr 2fr; }
+  grid-template-areas: 'header header' 'left right';
+  grid-template-columns: repeat(2, 600px);
+  justify-content: center; }
 
 h1, h3 {
   text-transform: uppercase; }
 
+h1 {
+  font-size: 4rem; }
+
+h3 {
+  font-weight: bolder;
+  margin: 15px 0; }
+
 .header {
+  margin-top: 20px;
   grid-area: header; }
 
+.display-section {
+  grid-area: left;
+  display: grid;
+  gap: 20px;
+  width: 600px;
+  grid-template-areas: 'image image' 'btn-r btn-d';
+  grid-template-columns: repeat(2, 1fr); }
+  .display-section button {
+    border: none;
+    padding: 15px 0;
+    font-size: 1.2rem;
+    font-weight: 700; }
+
 .img-container {
-  height: 720px;
-  width: 720px;
+  height: 600px;
+  width: 600px;
   grid-area: image; }
   .img-container img {
+    height: 600px;
+    width: 600px;
     position: absolute; }
-
-.style-section {
-  grid-area: style-section; }
+    .img-container img:nth-child(0) {
+      z-index: 10; }
+    .img-container img:nth-child(1) {
+      z-index: 20; }
+    .img-container img:nth-child(2) {
+      z-index: 30; }
+    .img-container img:nth-child(3) {
+      z-index: 40; }
+    .img-container img:nth-child(4) {
+      z-index: 50; }
+    .img-container img:nth-child(5) {
+      z-index: 60; }
+    .img-container img:nth-child(6) {
+      z-index: 70; }
+    .img-container img:nth-child(7) {
+      z-index: 80; }
 
 #btn-download {
   grid-area: btn-d; }
 
 #btn-random {
   grid-area: btn-r; }
+
+.style-section {
+  grid-area: right;
+  padding-left: 20px; }
+  .style-section .categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; }
+  .style-section .ck-button {
+    color: #4a87ea;
+    font-size: 1.3rem;
+    background: transparent;
+    border: 2px solid #4a87ea;
+    padding: 15px 30px;
+    border-radius: 50px; }
+    .style-section .ck-button:hover {
+      font-weight: bolder;
+      border-width: 3px; }
+  .style-section input:checked + .ck-button {
+    color: #e4e4e7;
+    background: #193c9a;
+    border-color: #193c9a; }
