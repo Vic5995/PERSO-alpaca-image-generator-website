@@ -1,0 +1,23 @@
+{
+  "name": "perso-alpaca-image-generator-website",
+  "version": "1.0.0",
+  "description": "front-end project for my protfolio",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vic5995/PERSO-alpaca-image-generator-website.git"
+  },
+  "author": "Victoire Lenglart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vic5995/PERSO-alpaca-image-generator-website/issues"
+  },
+  "homepage": "https://github.com/Vic5995/PERSO-alpaca-image-generator-website#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
