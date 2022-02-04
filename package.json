@@ -1,7 +1,8 @@
 {
   "name": "perso-alpaca-image-generator-website",
   "version": "1.0.0",
-  "description": "front-end project for my protfolio",
+  "description": "front-end project for my portfolio",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css/ --recursive",

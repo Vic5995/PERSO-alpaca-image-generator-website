@@ -63,29 +63,32 @@ h3 {
     height: $image-width;
     width: $image-width;
     position: absolute;
-    &:nth-child(0) {
-      z-index: 10;
-    }
     &:nth-child(1) {
-      z-index: 20;
+      z-index: -1;
     }
     &:nth-child(2) {
-      z-index: 30;
+      z-index: 20;
     }
     &:nth-child(3) {
-      z-index: 40;
+      z-index: 30;
     }
     &:nth-child(4) {
-      z-index: 50;
+      z-index: 40;
     }
     &:nth-child(5) {
-      z-index: 60;
+      z-index: 50;
     }
     &:nth-child(6) {
-      z-index: 70;
+      z-index: 60;
     }
     &:nth-child(7) {
+      z-index: 70;
+    }
+    &:nth-child(8) {
       z-index: 80;
+    }
+    &:nth-child(9) {
+      z-index: 90;
     }
   }
 }
@@ -102,10 +105,15 @@ h3 {
   grid-area: right;
   padding-left: 20px;
 
-  .categories-container {
+  .categories-container, .style-container-list {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+  }
+  .style-container-list {
+    &.hidden {
+      display: none;
+    }
   }
   .ck-button {
     color: $blue-light;

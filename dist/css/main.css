@@ -52,22 +52,24 @@ h3 {
     height: 600px;
     width: 600px;
     position: absolute; }
-    .img-container img:nth-child(0) {
-      z-index: 10; }
     .img-container img:nth-child(1) {
-      z-index: 20; }
+      z-index: -1; }
     .img-container img:nth-child(2) {
-      z-index: 30; }
+      z-index: 20; }
     .img-container img:nth-child(3) {
-      z-index: 40; }
+      z-index: 30; }
     .img-container img:nth-child(4) {
-      z-index: 50; }
+      z-index: 40; }
     .img-container img:nth-child(5) {
-      z-index: 60; }
+      z-index: 50; }
     .img-container img:nth-child(6) {
-      z-index: 70; }
+      z-index: 60; }
     .img-container img:nth-child(7) {
+      z-index: 70; }
+    .img-container img:nth-child(8) {
       z-index: 80; }
+    .img-container img:nth-child(9) {
+      z-index: 90; }
 
 #btn-download {
   grid-area: btn-d; }
@@ -78,10 +80,12 @@ h3 {
 .style-section {
   grid-area: right;
   padding-left: 20px; }
-  .style-section .categories-container {
+  .style-section .categories-container, .style-section .style-container-list {
     display: flex;
     flex-wrap: wrap;
     gap: 10px; }
+  .style-section .style-container-list.hidden {
+    display: none; }
   .style-section .ck-button {
     color: #4a87ea;
     font-size: 1.3rem;
