@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alpaca Image Generator</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<main>
+    <h1 class="header">Alpaca Generator</h1>
+
+
+        <div class="display-section">
+            <div class="img-container">
+                <img src="res/images/backgrounds/blue50.png" alt="background color" class="shifting-image">
+                <img src="res/images/leg/default.png" alt="alpaca's leg" class="shifting-image">
+                <img src="res/images/neck/default.png" alt="alpaca's neck" class="shifting-image">
+                <img src="res/images/ears/default.png" alt="alpaca's ears" class="shifting-image">
+                <img src="res/images/nose.png" alt="alpaca's nose">
+                <img src="res/images/hair/default.png" alt="alpaca's hair" class="shifting-image">
+                <img src="res/images/eyes/default.png" alt="alpaca's eyes" class="shifting-image">
+                <img src="res/images/mouth/default.png" alt="alpaca's mouth" class="shifting-image">
+                <img src="#" alt="alpaca's accessories" class="shifting-image" hidden>
+            </div>
+
+            <button id="btn-random">🔀 Random</button>
+            <button id="btn-download">🖼 Download</button>
+        </div>
+
+        <div class="style-section">
+            <h3>Accessorize the Alpaca's</h3>
+            <div class="categories-container">
+                <input type="radio" name="category" id="category-hair" value="Hair" hidden>
+                <label class="ck-button" for="category-hair">Hair</label>
+
+                <input type="radio" name="category" id="category-ears" value="Ears" hidden>
+                <label class="ck-button" for="category-ears">Ears</label>
+
+                <input type="radio" name="category" id="category-eyes" value="Eyes" hidden>
+                <label class="ck-button" for="category-eyes">Eyes</label>
+
+                <input type="radio" name="category" id="category-mouth" value="Mouth" hidden>
+                <label class="ck-button" for="category-mouth">Mouth</label>
+
+                <input type="radio" name="category" id="category-neck" value="Neck" hidden>
+                <label class="ck-button" for="category-neck">Neck</label>
+
+                <input type="radio" name="category" id="category-leg" value="Leg" hidden>
+                <label class="ck-button" for="category-leg">Leg</label>
+
+                <input type="radio" name="category" id="category-acces" value="Accessories" hidden>
+                <label class="ck-button" for="category-acces">Accessories</label>
+
+                <input type="radio" name="category" id="category-bg" value="Backgrounds" hidden>
+                <label class="ck-button" for="category-bg">Background</label>
+            </div>
+
+            <h3>Style</h3>
+            <div class="style-container">
+
+            </div>
+        </div>
+
+
+</main>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
