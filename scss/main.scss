@@ -46,8 +46,10 @@ h3 {
   grid-template-areas: 'image image'
                        'btn-r btn-d';
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: $image-width min-content;
 
   button {
+    align-self: start;
     border: none;
     padding: 15px 0;
     font-size: 1.2rem;
@@ -63,33 +65,6 @@ h3 {
     height: $image-width;
     width: $image-width;
     position: absolute;
-    //&:nth-child(1) {
-    //  z-index: -1;
-    //}
-    //&:nth-child(2) {
-    //  z-index: 20;
-    //}
-    //&:nth-child(3) {
-    //  z-index: 30;
-    //}
-    //&:nth-child(4) {
-    //  z-index: 40;
-    //}
-    //&:nth-child(5) {
-    //  z-index: 50;
-    //}
-    //&:nth-child(6) {
-    //  z-index: 60;
-    //}
-    //&:nth-child(7) {
-    //  z-index: 70;
-    //}
-    //&:nth-child(8) {
-    //  z-index: 80;
-    //}
-    //&:nth-child(9) {
-    //  z-index: 90;
-    //}
   }
 }
 

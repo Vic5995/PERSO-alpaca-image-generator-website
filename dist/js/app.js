@@ -1,4 +1,3 @@
-// const imagesLabels = require("./ressources-labels");
 import {imagesLabels} from "./ressources-labels.js";
 
 const styleContainer = document.querySelector(".style-container")
