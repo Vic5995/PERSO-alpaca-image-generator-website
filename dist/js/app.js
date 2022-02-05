@@ -2,7 +2,7 @@ import mergeImages from './merge-images.js'
 
 import {imagesLabels} from "./ressources-labels.js";
 
-const NOSE_ID = 6
+const NOSE_ID = 5
 
 const styleContainer = document.querySelector(".style-container")
 
@@ -66,7 +66,17 @@ btnRandom.addEventListener('click', () => {
         if(image.id !== NOSE_ID) {
             const imgContainer = document.querySelector(`.img-container .shifting-image:nth-child(${image.id})`)
             const r = Math.floor(Math.random() * image.items.length)
-            imgContainer.src = `res/images/${image.category}/${image.items[r]}.png`
+            if (image.category === "accessories") {
+                if (r === 0) {
+                    imgContainer.src = "#"
+                    imgContainer.setAttribute("hidden", "")
+                } else {
+                    imgContainer.src = `res/images/${image.category}/${image.items[r]}.png`
+                    imgContainer.removeAttribute("hidden")
+                }
+            } else {
+                imgContainer.src = `res/images/${image.category}/${image.items[r]}.png`
+            }
         }
     })
 })

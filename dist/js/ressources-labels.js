@@ -95,6 +95,12 @@ export const imagesLabels = [
     },
     {
         "id": 5,
+        "category": "nose",
+        "items": [],
+        "labels": []
+    },
+    {
+        "id": 6,
         "category": "hair",
         "items": [
             "default",
@@ -114,12 +120,6 @@ export const imagesLabels = [
             "Quiff",
             "Short"
         ]
-    },
-    {
-        "id": 6,
-        "category": "nose",
-        "items": [],
-        "labels": []
     },
     {
         "id": 7,
