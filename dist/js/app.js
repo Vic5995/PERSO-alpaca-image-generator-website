@@ -1,3 +1,5 @@
+import mergeImages from './merge-images.js'
+
 import {imagesLabels} from "./ressources-labels.js";
 
 const NOSE_ID = 6
@@ -36,7 +38,6 @@ for (let i = 0; i < styleContainerLists.length; i++) {
     const container = styleContainerLists[i]
     const inputs = container.querySelectorAll("input")
     const imgContainer = document.querySelector(`.img-container .shifting-image:nth-child(${i + 1})`)
-    console.log(imgContainer)
     inputs.forEach( input => {
         input.addEventListener('change', () => {
             const loc = input.id.split("-")
@@ -54,6 +55,22 @@ btnRandom.addEventListener('click', () => {
             const r = Math.floor(Math.random() * image.items.length)
             imgContainer.src = `res/images/${image.category}/${image.items[r]}.png`
         }
+    })
+})
+
+const btnDownload = document.querySelector("#btn-download")
+
+btnDownload.addEventListener('click', () => {
+    const images = document.querySelectorAll(".img-container img")
+    let imageUrls = []
+    images.forEach( el => {
+        imageUrls.push(el.src)
+    })
+    mergeImages(imageUrls).then( (b64) => {
+        let link = document.createElement("a")
+        link.download = 'alpaca.png'
+        link.href = b64;
+        link.click()
     })
 })
 
