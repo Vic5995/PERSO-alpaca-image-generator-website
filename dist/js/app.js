@@ -18,6 +18,9 @@ imagesLabels.forEach( label => {
 })
 
 const styleContainerLists = document.querySelectorAll(".style-container-list")
+styleContainerLists.forEach( (el) => {
+    if (el.children.item(0) !== null) el.children.item(0).setAttribute("checked", "")
+})
 
 const ckCategories = document.querySelectorAll(".categories-container input")
 let curCategory = ""
@@ -41,7 +44,17 @@ for (let i = 0; i < styleContainerLists.length; i++) {
     inputs.forEach( input => {
         input.addEventListener('change', () => {
             const loc = input.id.split("-")
-            imgContainer.src = `res/images/${loc[0]}/${loc[1]}.png`
+            if (loc[0] === "accessories") {
+                if (loc[1] !== "none") {
+                    imgContainer.src = `res/images/${loc[0]}/${loc[1]}.png`
+                    imgContainer.removeAttribute("hidden")
+                } else {
+                    imgContainer.src = "#"
+                    imgContainer.setAttribute("hidden", "")
+                }
+            } else {
+                imgContainer.src = `res/images/${loc[0]}/${loc[1]}.png`
+            }
         })
     })
 }
@@ -64,7 +77,9 @@ btnDownload.addEventListener('click', () => {
     const images = document.querySelectorAll(".img-container img")
     let imageUrls = []
     images.forEach( el => {
-        imageUrls.push(el.src)
+        if (!el.hasAttribute("hidden")) {
+            imageUrls.push(el.src)
+        }
     })
     mergeImages(imageUrls).then( (b64) => {
         let link = document.createElement("a")

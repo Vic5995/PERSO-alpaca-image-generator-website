@@ -163,12 +163,14 @@ export const imagesLabels = [
         "id": 9,
         "category": "accessories",
         "items": [
+            "none",
             "earings",
             "flower",
             "glasses",
             "headphone"
         ],
         "labels": [
+            "None",
             "Earings",
             "Flower",
             "Glasses",
