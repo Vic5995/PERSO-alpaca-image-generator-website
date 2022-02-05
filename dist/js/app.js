@@ -19,7 +19,7 @@ const styleContainerLists = document.querySelectorAll(".style-container-list")
 const ckCategories = document.querySelectorAll(".categories-container input")
 let curCategory = ""
 
-ckCategories.forEach( el => el.addEventListener('change', event => {
+ckCategories.forEach( el => el.addEventListener('change', () => {
     if (el.checked) {
         if (curCategory !== "") {
             let styleList = document.querySelector(`#${curCategory.toLowerCase()}-style`)
@@ -34,7 +34,8 @@ ckCategories.forEach( el => el.addEventListener('change', event => {
 for (let i = 0; i < styleContainerLists.length; i++) {
     const container = styleContainerLists[i]
     const inputs = container.querySelectorAll("input")
-    const imgContainer = document.querySelector(`.img-container img:nth-child(${i + 1})`)
+    const imgContainer = document.querySelector(`.img-container .shifting-image:nth-child(${i + 1})`)
+    console.log(imgContainer)
     inputs.forEach( input => {
         input.addEventListener('change', () => {
             const loc = input.id.split("-")

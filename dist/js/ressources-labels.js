@@ -1,20 +1,5 @@
 export const imagesLabels = [
     {
-        "category": "accessories",
-        "items": [
-            "earings",
-            "flower",
-            "glasses",
-            "headphone"
-        ],
-        "labels": [
-            "Earings",
-            "Flower",
-            "Glasses",
-            "Headphone"
-        ]
-    },
-    {
         "category": "backgrounds",
         "items" : [
             "blue50",
@@ -58,6 +43,40 @@ export const imagesLabels = [
         ]
     },
     {
+        "category": "leg",
+        "items": [
+            "default",
+            "bubbletea",
+            "cookie",
+            "gameconsole",
+            "tiltbackward",
+            "tiltforward"
+        ],
+        "labels": [
+            "Default",
+            "Bubble Tea",
+            "Cookie",
+            "Game Console",
+            "Tilt Backward",
+            "Tilt Forward"
+        ]
+    },
+    {
+        "category": "neck",
+        "items": [
+            "default",
+            "thick",
+            "bendbackward",
+            "bendforward"
+        ],
+        "labels": [
+            "Default",
+            "Thick",
+            "Bend Backward",
+            "Bend Forward"
+        ]
+    },
+    {
         "category": "ears",
         "items": [
             "default",
@@ -68,25 +87,6 @@ export const imagesLabels = [
             "Default",
             "Tilt Backward",
             "Tilt Forward"
-        ]
-    },
-    {
-        "category": "eyes",
-        "items": [
-            "default",
-            "angry",
-            "naughty",
-            "panda",
-            "smart",
-            "star"
-        ],
-        "labels": [
-            "Default",
-            "Angry",
-            "Naughty",
-            "Panda",
-            "Smart",
-            "Star"
         ]
     },
     {
@@ -111,22 +111,27 @@ export const imagesLabels = [
         ]
     },
     {
-        "category": "leg",
+        "category": "nose",
+        "items": [],
+        "labels": []
+    },
+    {
+        "category": "eyes",
         "items": [
             "default",
-            "bubbletea",
-            "cookie",
-            "gameconsole",
-            "tiltbackward",
-            "tiltforward"
+            "angry",
+            "naughty",
+            "panda",
+            "smart",
+            "star"
         ],
         "labels": [
             "Default",
-            "Bubble Tea",
-            "Cookie",
-            "Game Console",
-            "Tilt Backward",
-            "Tilt Forward"
+            "Angry",
+            "Naughty",
+            "Panda",
+            "Smart",
+            "Star"
         ]
     },
     {
@@ -147,18 +152,18 @@ export const imagesLabels = [
         ]
     },
     {
-        "category": "neck",
+        "category": "accessories",
         "items": [
-            "default",
-            "thick",
-            "bendbackward",
-            "bendforward"
+            "earings",
+            "flower",
+            "glasses",
+            "headphone"
         ],
         "labels": [
-            "Default",
-            "Thick",
-            "Bend Backward",
-            "Bend Forward"
+            "Earings",
+            "Flower",
+            "Glasses",
+            "Headphone"
         ]
     },
 ]
