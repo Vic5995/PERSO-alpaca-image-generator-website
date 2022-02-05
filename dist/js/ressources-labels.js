@@ -1,5 +1,6 @@
 export const imagesLabels = [
     {
+        "id": 1,
         "category": "backgrounds",
         "items" : [
             "blue50",
@@ -43,6 +44,7 @@ export const imagesLabels = [
         ]
     },
     {
+        "id": 2,
         "category": "leg",
         "items": [
             "default",
@@ -62,6 +64,7 @@ export const imagesLabels = [
         ]
     },
     {
+        "id": 3,
         "category": "neck",
         "items": [
             "default",
@@ -77,6 +80,7 @@ export const imagesLabels = [
         ]
     },
     {
+        "id": 4,
         "category": "ears",
         "items": [
             "default",
@@ -90,6 +94,7 @@ export const imagesLabels = [
         ]
     },
     {
+        "id": 5,
         "category": "hair",
         "items": [
             "default",
@@ -111,11 +116,13 @@ export const imagesLabels = [
         ]
     },
     {
+        "id": 6,
         "category": "nose",
         "items": [],
         "labels": []
     },
     {
+        "id": 7,
         "category": "eyes",
         "items": [
             "default",
@@ -135,6 +142,7 @@ export const imagesLabels = [
         ]
     },
     {
+        "id": 8,
         "category": "mouth",
         "items": [
             "default",
@@ -152,6 +160,7 @@ export const imagesLabels = [
         ]
     },
     {
+        "id": 9,
         "category": "accessories",
         "items": [
             "earings",

@@ -1,5 +1,7 @@
 import {imagesLabels} from "./ressources-labels.js";
 
+const NOSE_ID = 6
+
 const styleContainer = document.querySelector(".style-container")
 
 imagesLabels.forEach( label => {
@@ -42,4 +44,16 @@ for (let i = 0; i < styleContainerLists.length; i++) {
         })
     })
 }
+
+const btnRandom = document.querySelector("#btn-random")
+
+btnRandom.addEventListener('click', () => {
+    imagesLabels.forEach(image => {
+        if(image.id !== NOSE_ID) {
+            const imgContainer = document.querySelector(`.img-container .shifting-image:nth-child(${image.id})`)
+            const r = Math.floor(Math.random() * image.items.length)
+            imgContainer.src = `res/images/${image.category}/${image.items[r]}.png`
+        }
+    })
+})
 
